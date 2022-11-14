@@ -362,5 +362,6 @@ body.dark .wrapper {
   .wrapper {
     max-width: 18.875rem;
     height: 95%;
+    max-height: 600px;
   }
 }
