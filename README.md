@@ -1,8 +1,8 @@
 ## _TASK APP_ - V 1.0
 
-Aplicación sencilla para enlistar tareas.
+![Logo](assets/favicon.svg)
 
-![Task App](assets/presentation.png)
+Aplicación sencilla para enlistar tareas.
 
 CARACTERÍSTICAS
 
@@ -11,5 +11,3 @@ CARACTERÍSTICAS
 - Programación en _Vanilla Javascript_
 
 Deja tus sugerencias en _imivan.info@gmail.com_
-
-![Logotype](assets/logotype.svg)

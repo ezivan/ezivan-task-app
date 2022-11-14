@@ -92,7 +92,10 @@ export default function app() {
   });
 
   d.addEventListener("click", (e) => {
-    if (e.target.matches(".add-task-btn *")) {
+    if (
+      e.target.matches(".add-task-btn") ||
+      e.target.matches(".add-task-btn *")
+    ) {
       if ($input.value !== "" && $input.value.trim() !== "") {
         saveHomework();
       } else {
