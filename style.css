@@ -5,7 +5,7 @@
   --light-box-shadow: 0 2px 10px 1px #c6c6c6;
   /* Dark colors */
   --dark-primary-color: #0d1317;
-  --dark-secondary-color: #2C3639;
+  --dark-secondary-color: #2c3639;
   --dark-tertiary-color: #9f9c9c;
   --dark-white-color: #edebe8;
   --dark-box-shadow: 0 0 4px #010101;
@@ -24,7 +24,7 @@
 a {
   padding: 0.5rem;
   color: #262b2f;
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 
@@ -44,7 +44,8 @@ body {
   background-color: #f2f2f2;
 }
 
-@media screen and (min-width: 37.5rem) {}
+@media screen and (min-width: 37.5rem) {
+}
 
 body.dark {
   background-color: var(--dark-secondary-color);
@@ -53,7 +54,7 @@ body.dark {
 
 html {
   font-size: 16px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   user-select: none;
 }
 
@@ -78,7 +79,7 @@ html {
   opacity: 0;
   visibility: hidden;
   transform: scale(0.8);
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 body.dark .modal-confirm-container {
@@ -99,7 +100,7 @@ body.dark .modal-confirm-container {
   justify-content: space-around;
 }
 
-.modal-confirm-btn>button {
+.modal-confirm-btn > button {
   width: 4rem;
   height: 1.5rem;
   color: var(--light-primary-color);
@@ -107,10 +108,9 @@ body.dark .modal-confirm-container {
   background-color: var(--light-secondary-color);
   border: none;
   cursor: pointer;
-
 }
 
-body.dark .modal-confirm-btn>button {
+body.dark .modal-confirm-btn > button {
   background-color: var(--dark-secondary-color);
 }
 
@@ -135,7 +135,7 @@ body.dark .modal-confirm-btn>button {
   transform: translateX(50%);
   opacity: 0;
   visibility: hidden;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 body.dark .menu {
@@ -171,12 +171,12 @@ body.dark .menu {
   position: absolute;
   top: -1.6rem;
   left: 20%;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #e28282;
   transform: translate(0, 1.8rem);
   opacity: 0;
   visibility: hidden;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .input-error-message.active {
@@ -191,11 +191,10 @@ body.dark .menu {
   height: 4.6875rem;
   background-color: var(--light-primary-color);
   box-shadow: var(--light-box-shadow);
-
 }
 
 .header h1 {
-  font-family: 'Secular One', sans-serif;
+  font-family: "Secular One", sans-serif;
 }
 
 body.dark .header {
@@ -207,13 +206,13 @@ body.dark .header * {
   color: var(--dark-text-color);
 }
 
-.header>.container {
+.header > .container {
   position: relative;
   height: 100%;
   display: flex;
 }
 
-.header>.container {
+.header > .container {
   position: relative;
   height: 100%;
   display: flex;
@@ -232,7 +231,6 @@ body.dark .header * {
   height: 75px;
   background-color: var(--light-primary-color);
   box-shadow: var(--light-box-shadow);
-
 }
 
 body.dark .new-task-section {
@@ -240,7 +238,7 @@ body.dark .new-task-section {
   box-shadow: var(--dark-box-shadow);
 }
 
-.new-task-section>.container {
+.new-task-section > .container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -253,7 +251,7 @@ body.dark .new-task-section {
   padding: 0.5rem;
   border-radius: 10px;
   border: none;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-family: inherit;
   color: var(--light-secondary-color);
   background-color: var(--dark-white-color);
@@ -274,7 +272,7 @@ body.dark .input-task {
   cursor: pointer;
 }
 
-body.dark button>svg {
+body.dark button > svg {
   fill: var(--light-primary-color);
 }
 
@@ -301,22 +299,26 @@ body.dark button>svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 1rem;
-  margin-top: .7rem;
+  padding: 0.5rem 1rem;
+  margin-top: 0.7rem;
   margin-right: auto;
   margin-left: auto;
-  font-size: .8rem;
+  font-size: 0.8rem;
   background-color: var(--light-primary-color);
   box-shadow: var(--light-box-shadow);
   border-radius: 5px;
   user-select: text;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .task-list-item.complete {
   text-decoration: line-through;
   background-color: var(--dark-white-color);
   order: 1;
+}
+
+li.task-list-item.complete > p {
+  text-decoration: line-through;
 }
 
 .task-list-item.complete:first-child {
@@ -333,7 +335,7 @@ body.dark .task-list-item {
   box-shadow: var(--dark-box-shadow);
 }
 
-.task-list-item>p {
+.task-list-item > p {
   width: 80%;
 }
 
@@ -349,7 +351,7 @@ body.dark .task-list-item {
   background-color: var(--light-primary-color);
   overflow: hidden;
   box-shadow: var(--light-box-shadow);
-  border-radius: .6rem;
+  border-radius: 0.6rem;
 }
 
 body.dark .wrapper {

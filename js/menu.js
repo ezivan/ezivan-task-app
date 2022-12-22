@@ -1,11 +1,23 @@
-const d = document;
-export default function menu() {
-  const $btn = d.querySelector(".menu-btn"),
-    $menu = d.querySelector(".menu");
+const d = document,
+   $btn = d.querySelector(".menu-btn"),
+   $menu = d.getElementById("menu");
 
-  $btn.addEventListener("click", () => {
-    $btn.firstElementChild.classList.toggle("none");
-    $btn.lastElementChild.classList.toggle("none");
-    $menu.classList.toggle("active");
-  });
+export function hiddenMenu() {
+  $menu.classList.remove("active");
+  $btn.firstElementChild.classList.remove("none");
+  $btn.lastElementChild.classList.add("none");
+}
+
+export default function menu() {
+
+  d.addEventListener("click", (e) => {
+    if (e.target.matches(`.menu-btn *`)) {
+      $btn.firstElementChild.classList.toggle("none");
+      $btn.lastElementChild.classList.toggle("none");
+      $menu.classList.toggle("active");
+    };
+    if (e.target.matches(".task-list")) {
+     hiddenMenu();
+    };
+  })
 }
