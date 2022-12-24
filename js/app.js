@@ -1,9 +1,9 @@
-import {hiddenMenu} from "./menu.js"
+import { hiddenMenu } from "./menu.js";
 
 const d = document,
-    ls = localStorage,
-    $input = d.getElementById("homework-input"),
-    $list = d.getElementById("list");
+  lS = localStorage,
+  $input = d.getElementById("homework-input"),
+  $list = d.getElementById("list");
 
 export default function app() {
   const saveHomework = () => {
@@ -12,24 +12,24 @@ export default function app() {
       id: crypto.randomUUID(),
     };
 
-    if (ls.getItem("myTasks") === null) {
+    if (lS.getItem("tasks") === null) {
       let chores = [];
       chores.push(task);
-      ls.setItem("myTasks", JSON.stringify(chores));
+      lS.setItem("tasks", JSON.stringify(chores));
     } else {
-      let myTasks = JSON.parse(ls.getItem("myTasks"));
+      let myTasks = JSON.parse(lS.getItem("tasks"));
       myTasks.push(task);
-      ls.setItem("myTasks", JSON.stringify(myTasks));
+      lS.setItem("tasks", JSON.stringify(myTasks));
     }
     showData();
     $input.value = "";
   };
 
   const showData = () => {
-    let allTasks = JSON.parse(ls.getItem("myTasks"));
+    let allTasks = JSON.parse(lS.getItem("tasks"));
     $list.innerHTML = "";
 
-    if (ls.getItem("myTasks") !== null && allTasks.length !== 0) {
+    if (lS.getItem("tasks") !== null && allTasks.length !== 0) {
       allTasks.forEach((el) => {
         $list.innerHTML += `
         <li class="task-list-item" data-id="${el.id}">
@@ -48,21 +48,21 @@ export default function app() {
   };
 
   const removeTask = (id) => {
-    let myTasks = JSON.parse(ls.getItem("myTasks"));
+    let myTasks = JSON.parse(lS.getItem("tasks"));
 
     for (let i = 0; i < myTasks.length; i++) {
       if (id === myTasks[i].id) {
         myTasks.splice(i, 1);
       }
     }
-    ls.setItem("myTasks", JSON.stringify(myTasks));
+    lS.setItem("tasks", JSON.stringify(myTasks));
     showData();
   };
 
   const deleteAll = () => {
-    let allTasks = JSON.parse(ls.getItem("myTasks"));
+    let allTasks = JSON.parse(lS.getItem("tasks"));
     allTasks = [];
-    ls.setItem("myTasks", JSON.stringify(allTasks));
+    lS.setItem("tasks", JSON.stringify(allTasks));
     showData();
   };
 
